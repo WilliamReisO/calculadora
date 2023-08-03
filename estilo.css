@@ -4,6 +4,18 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+}
 body{
     width: 100%;
     height: 100vh;
@@ -20,12 +32,14 @@ body{
     justify-content: center;
     background-color: rgba(240, 248, 255, 0.385); 
     border: 1px solid white;
-    width: 340px;
-    height: 510px;
+    width: 360px;
+    height: 540px;
     border-radius: 30px;
+    overflow: hidden;
     box-shadow: 5px  10px 30px rgba(0, 0, 0, 0.1);
 }
 .displey{
+   
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -39,6 +53,25 @@ body{
     align-items: center;
     justify-content: center;
 }
+.chaves > *{
+    padding: 0.5em 1.25em;
+    position: relative;
+    text-align: center;
+}
+.button .operator> *:active::before,
+.button .operator> .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 input{
     
     justify-content: center;
@@ -51,8 +84,13 @@ input{
     padding: 24px;
     margin: 10px;
     background: transparent;
-    box-shadow: 5px  10px 15px rgba(84, 84, 54, 0.459);
+    box-shadow: 7px  7px 3px 4px  rgba(149, 149, 118, 0.459);
 }
+input.active,
+input:hover{
+    border: none;
+}
+
 input::placeholder{
     color: rgb(99, 99, 99);
 }
@@ -69,9 +107,15 @@ button{
     box-shadow: -8px -8px 20px rgba(6, 4, 4, 0.16);
 
 }
+button:hover{
+background: #ffffff9b;
+}
 
 .buttonEqual{
     background-color: #F4D03F;
+}
+.buttonEqual:hover{
+    background-color: #efe3b2;
 }
 .operator{
     color: #B5C99A;
