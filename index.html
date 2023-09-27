@@ -9,41 +9,35 @@
 <body>
     <div class="calculadora">
         <div class="display">
-            <input type="text" id="inputBox" placeholder="0" disabled>
+            <input type="text" id="display"  readonly>
         </div>
         <div class="chaves">
+        
         <div>
-            <button class="button operator" data-action="clear">C</button>
-            <button class="button operator" data-action="delete">Del</button>
-            <button class="button operator" data-action="">/</button>
-            <button class="button operator" data-action="divide">÷</button>
+            <button onclick="adicionarNumero(7)">7</button>
+            <button onclick="adicionarNumero(8)">8</button>
+            <button onclick="adicionarNumero(9)">9</button>
+            <button class="button operator" onclick="operacao('x')">&times;</button>
          </div>
         <div>
-            <button value="7">7</button>
-            <button value="8">8</button>
-            <button value="9">9</button>
-            <button class="button operator" data-action="multiply">&times;</button>
+            <button onclick="adicionarNumero(4)">4</button>
+            <button onclick="adicionarNumero(5)">5</button>
+            <button onclick="adicionarNumero(6)">6</button>
+            <button class="button operator" onclick="operacao('-')">-</button>
          </div>
         <div>
-            <button value="4">4</button>
-            <button value="5">5</button>
-            <button value="6">6</button>
-            <button class="button operator" data-action="subtract">-</button>
+            <button onclick="adicionarNumero(1)" >1</button>
+            <button onclick="adicionarNumero(2)" >2</button>
+            <button onclick="adicionarNumero(3)" >3</button>
+            <button class="button operator"onclick="operacao('+')">+</button>
          </div>
-        <div>
-            <button value="1" >1</button>
-            <button value="2" >2</button>
-            <button value="3" >3</button>
-            <button class="button operator"data-action="add">+</button>
-         </div>
-        <div>
-            <button class="button operator" >+/-</button>
-            <button value="0">0</button>
-            <button class="button operator" data-action="decimal">.</button>
-            <button class="button buttonEqual "data-action="calculate">=</button>
+        <div> <button class="button operator"  onclick="limpar()">C</button>
+            <button onclick="adicionarNumero(0)">0</button>
+            <button class="button buttonEqual "onclick="calcular()">=</button>
+            <button class="button operator" onclick="operacao('/')">÷</button>
          </div>
         </div>
     </div>
-    <script src = "script.js"></script>
+    <script src ="script.js"></script>
 </body>
 </html>
