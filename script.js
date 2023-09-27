@@ -10,7 +10,7 @@ function adicionarNumero(numero) {
 function operacao(op) {
     operador = op;
     resultado = parseFloat(valorAtual);
-    valorAtual = "" + operador;
+    valorAtual = "";
     atualizarDisplay();
 }
 
